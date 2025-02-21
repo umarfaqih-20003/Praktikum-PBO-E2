@@ -1,1 +1,2 @@
-Pengumpulan Tugas Praktikum PBO E2
+Nama : Umar Faqih
+NIM : 24060123120003
