@@ -4,7 +4,7 @@
  * Tanggal      : 20 Februari 2025
  */
 
- public class MTitik { //kalo kumpul di kulon T nya ganti besar, soalnya yang periksa bu khadijah
+ public class MTitik { 
     public static void main(String[] args) {
         Titik T1 = new Titik(); //Membuat objek titik T1 (0,0)
         T1.setAbsis(3); //mengubah absis T1 dengan nilai 3
