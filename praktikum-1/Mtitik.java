@@ -1,10 +1,10 @@
-/* Nama File    : MTitik.java
+/* Nama File    : Mtitik.java
  * Deskripsi    : berisi atribut dan method dalam class Titik
  * Pembuat      : Umar Faqih/24060123120003
- * Tanggal      : 20 Februari 2025
+ * Tanggal      : 20/02/2025
  */
 
- public class MTitik { 
+ public class Mtitik { 
     public static void main(String[] args) {
         Titik T1 = new Titik(); //Membuat objek titik T1 (0,0)
         T1.setAbsis(3); //mengubah absis T1 dengan nilai 3
