@@ -6,41 +6,54 @@ classDiagram
     Dosen <|-- DosenTamu
     
     class Pegawai {
-        -String NIP
-        -String nama
-        -Date tanggalLahir
-        -Date TMT
-        -double gajiPokok
-        +printInfo()
-        +hitungMasaKerja()
+        # String nip
+        # String nama
+        # String tanggalLahir
+        # String tmt
+        # double gajiPokok
+        # int masaKerja
+        
+        + Pegawai(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok)
+        # int hitungMasaKerja(String tmt)
+        # int getBulanIndex(String namaBulan)
+        + String hitungBUP()
+        + double hitungTunjangan()
+        + void printInfo()
     }
     
     class Dosen {
-        #String fakultas
-        +printInfo()
+        # String nidn
+
+        + Dosen(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String nidn)
     }
     
     class DosenTetap {
-        -String NIDN
-        -Date BUP
-        -double tunjangan
-        +hitungTunjangan()
-        +printInfo()
+        # String fakultas
+        # String jabatan
+
+        + DosenTetap(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String nidn, String fakultas, String jabatan)
+        + String hitungBUP()
+        + double hitungTunjangan()
+        + void printInfo()
     }
     
     class DosenTamu {
-        -String NIDK
-        -Date tanggalAkhirKontrak
-        -double tunjangan
-        +hitungTunjangan()
-        +printInfo()
+        # String fakultas
+        # String tanggalBerakhirKontrak
+        # String nidk
+
+        + DosenTamu(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String nidk, String fakultas, String tanggalBerakhirKontrak)
+        + String hitungBUP()
+        + double hitungTunjangan()
+        + void printInfo()
     }
     
     class Tendik {
-        -String bidang
-        -Date BUP
-        -double tunjangan
-        +hitungTunjangan()
-        +printInfo()
+        # String bidang
+
+        + Tendik(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String bidang)
+        + String hitungBUP()
+        + double hitungTunjangan()
+        + void printInfo()
     }
 ```
