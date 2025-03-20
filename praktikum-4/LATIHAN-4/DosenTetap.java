@@ -4,16 +4,35 @@
  * Tanggal      : 16/03/2025
  */
 
-class DosenTetap extends Dosen {
+ class DosenTetap extends Dosen {
     /* ATRIBUT */
     protected String fakultas;
     protected String jabatan;
 
     /* METHOD */
-    public DosenTetap(String nip, String nama, String tanggalLahir, String tmt, 
-                      double gajiPokok, String nidn, String fakultas, String jabatan) {
+    public DosenTetap() {
+
+    }
+    
+    public DosenTetap(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String nidn, String fakultas, String jabatan) {
         super(nip, nama, tanggalLahir, tmt, gajiPokok, nidn);
         this.fakultas = fakultas;
+        this.jabatan = jabatan;
+    }
+
+    public String getFakultas() {
+        return fakultas;
+    }
+    
+    public void setFakultas(String fakultas) {
+        this.fakultas = fakultas;
+    }
+    
+    public String getJabatan() {
+        return jabatan;
+    }
+    
+    public void setJabatan(String jabatan) {
         this.jabatan = jabatan;
     }
 

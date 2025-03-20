@@ -4,14 +4,25 @@
  * Tanggal      : 16/03/2025
  */
 
-class Tendik extends Pegawai {
+ class Tendik extends Pegawai {
     /* ATRIBUT */
     protected String bidang; 
     
     /* METHOD */
-    public Tendik(String nip, String nama, String tanggalLahir, String tmt, 
-                  double gajiPokok, String bidang) {
+    public Tendik() {
+
+    }
+    
+    public Tendik(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String bidang) {
         super(nip, nama, tanggalLahir, tmt, gajiPokok);
+        this.bidang = bidang;
+    }
+    
+    public String getBidang() {
+        return bidang;
+    }
+    
+    public void setBidang(String bidang) {
         this.bidang = bidang;
     }
 

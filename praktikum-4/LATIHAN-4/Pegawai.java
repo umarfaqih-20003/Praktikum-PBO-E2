@@ -4,7 +4,7 @@
  * Tanggal      : 16/03/2025
  */
 
-abstract class Pegawai {
+ abstract class Pegawai {
     /* ATRIBUT */
     protected String nip;
     protected String nama;
@@ -15,6 +15,10 @@ abstract class Pegawai {
     
     /* METHOD */
     // konstruktor Pegawai
+    public Pegawai() {
+
+    }
+    
     public Pegawai(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok) {
         this.nip = nip;
         this.nama = nama;
@@ -24,11 +28,6 @@ abstract class Pegawai {
         this.masaKerja = hitungMasaKerja(tmt);
     }
     
-    /**
-     * Method untuk menghitung masa kerja dari TMT sampai saat ini
-     * @param tmt Tanggal Mulai Tanggal bekerja
-     * @return Masa kerja dalam bulan
-     */
     protected int hitungMasaKerja(String tmt) {
         // Pisahkan tanggal TMT menjadi komponen hari, bulan, dan tahun
         String[] parts = tmt.split(" ");
@@ -67,20 +66,59 @@ abstract class Pegawai {
         return 0; 
     }
     
-    /**
-     * Method untuk menghitung BUP (Batas Usia Pensiun)
-     * @return Tanggal BUP
-     */
     public abstract String hitungBUP();
     
-    /**
-     * Method untuk menghitung tunjangan
-     * @return Nilai tunjangan
-     */
     public abstract double hitungTunjangan();
     
-    /**
-     * Method untuk menampilkan informasi pegawai
-     */
     public abstract void printInfo();
+    
+    public String getNip() {
+        return nip;
+    }
+    
+    public void setNip(String nip) {
+        this.nip = nip;
+    }
+    
+    public String getNama() {
+        return nama;
+    }
+    
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+    
+    public String getTanggalLahir() {
+        return tanggalLahir;
+    }
+    
+    public void setTanggalLahir(String tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+    
+    public String getTmt() {
+        return tmt;
+    }
+    
+    public void setTmt(String tmt) {
+        this.tmt = tmt;
+        // Update masa kerja saat TMT diubah
+        this.masaKerja = hitungMasaKerja(tmt);
+    }
+    
+    public double getGajiPokok() {
+        return gajiPokok;
+    }
+    
+    public void setGajiPokok(double gajiPokok) {
+        this.gajiPokok = gajiPokok;
+    }
+    
+    public int getMasaKerja() {
+        return masaKerja;
+    }
+    
+    public void setMasaKerja(int masaKerja) {
+        this.masaKerja = masaKerja;
+    }
 }

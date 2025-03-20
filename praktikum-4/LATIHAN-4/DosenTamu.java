@@ -4,7 +4,7 @@
  * Tanggal      : 16/03/2025
  */
 
-class DosenTamu extends Dosen {
+ class DosenTamu extends Dosen {
     /* ATRIBUT */
     protected String fakultas;
     protected String tanggalBerakhirKontrak;
@@ -12,10 +12,38 @@ class DosenTamu extends Dosen {
     
     /* METHOD */
     // konstruktor DosenTamu
+    public DosenTamu() {
+
+    }
+    
     public DosenTamu(String nip, String nama, String tanggalLahir, String tmt, double gajiPokok, String nidk, String fakultas, String tanggalBerakhirKontrak) {
         super(nip, nama, tanggalLahir, tmt, gajiPokok, "");
         this.fakultas = fakultas;
         this.tanggalBerakhirKontrak = tanggalBerakhirKontrak;
+        this.nidk = nidk;
+    }
+    
+    public String getFakultas() {
+        return fakultas;
+    }
+    
+    public void setFakultas(String fakultas) {
+        this.fakultas = fakultas;
+    }
+    
+    public String getTanggalBerakhirKontrak() {
+        return tanggalBerakhirKontrak;
+    }
+    
+    public void setTanggalBerakhirKontrak(String tanggalBerakhirKontrak) {
+        this.tanggalBerakhirKontrak = tanggalBerakhirKontrak;
+    }
+    
+    public String getNidk() {
+        return nidk;
+    }
+    
+    public void setNidk(String nidk) {
         this.nidk = nidk;
     }
 
